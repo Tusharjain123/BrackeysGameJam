@@ -13,12 +13,14 @@ public class EnemyScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Button.buttonPressed += (int buttonIdx) =>
-        {
-
-        };
+        
     }
 
+
+    void fun(int buttonIndex)
+    {
+
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Player")
