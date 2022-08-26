@@ -17,9 +17,9 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
-  - 
-  - 
+  - Background
+  - Blocking
+  - Entity
   - 
   - 
   - 
@@ -44,4 +44,10 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1975526717
+    locked: 0
+  - name: Player
+    uniqueID: 3477345793
     locked: 0
