@@ -39,13 +39,16 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
   m_SortingLayers:
   - name: Fire
     uniqueID: 3804908061
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1140385417
+    locked: 0
+  - name: Player
+    uniqueID: 9483607
     locked: 0
