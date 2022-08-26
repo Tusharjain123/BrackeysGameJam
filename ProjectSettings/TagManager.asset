@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Shootable
   - enemy
+  - KeyChest
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -51,4 +53,7 @@ TagManager:
     locked: 0
   - name: Player
     uniqueID: 9483607
+    locked: 0
+  - name: Interactable
+    uniqueID: 1622258679
     locked: 0

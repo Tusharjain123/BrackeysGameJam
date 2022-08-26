@@ -8,10 +8,13 @@ public class Button : MonoBehaviour
     public int buttonIndex;
     public delegate void ButtonPressed(int buttonIndex);
     public static event ButtonPressed buttonPressed;
-    private Animator m_animator;
+    public delegate void ButtonLeft(int buttonIndex);
+    public static event ButtonLeft buttonLeft;
+    //private Animator m_animator;
     void Start()
     {
-        m_animator = GetComponent<Animator>();
+        //m_animator = GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -22,10 +25,20 @@ public class Button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.name == "Player")
         {
+            Debug.Log("YES");
             buttonPressed?.Invoke(buttonIndex);
-            m_animator.SetBool("isPressed", true);
+            //m_animator.SetBool("isPressed", true);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.name == "Player")
+        {
+            Debug.Log("YES");
+            buttonLeft?.Invoke(buttonIndex);
+            //m_animator.SetBool("isPressed", true);
         }
     }
 }
