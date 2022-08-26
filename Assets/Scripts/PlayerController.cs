@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D rb;
     private BoxCollider2D boxCollider2D;
     RaycastHit2D hit;
-    [SerializeField] float colCheckDistance = 5f;
-    public LayerMask whatIsWall;
 
     private void Start()
     {
