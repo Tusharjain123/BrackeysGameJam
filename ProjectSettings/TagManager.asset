@@ -57,3 +57,6 @@ TagManager:
   - name: Interactable
     uniqueID: 1622258679
     locked: 0
+  - name: Traps
+    uniqueID: 781820395
+    locked: 0
