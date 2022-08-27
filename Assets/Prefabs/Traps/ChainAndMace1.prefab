@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2916221889659314538}
   - component: {fileID: 2916221889659314536}
   - component: {fileID: 2916221889659314537}
+  - component: {fileID: 4627774438100723035}
   m_Layer: 0
   m_Name: SawBloody
   m_TagString: Untagged
@@ -125,6 +126,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ecd98fc29fea0045aef7930c482ab7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4627774438100723035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2916221889659314532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3fc40a0a03f9e4194cfe5fa299d699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 100
 --- !u!1 &2916221890468683370
 GameObject:
   m_ObjectHideFlags: 0
