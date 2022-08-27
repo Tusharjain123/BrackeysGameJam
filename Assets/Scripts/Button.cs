@@ -25,7 +25,7 @@ public class Button : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("YES");
             buttonPressed?.Invoke(buttonIndex);
@@ -34,7 +34,7 @@ public class Button : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.name == "Player")
+        if (collision.gameObject.tag == "Player")
         {
             Debug.Log("YES");
             buttonLeft?.Invoke(buttonIndex);

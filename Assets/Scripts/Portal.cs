@@ -2,16 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Portal : Collidable
+public class Portal : MonoBehaviour
 {
-    
-    protected override void OnCollide(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(col.name == "Player")
+        if(collision.tag == "Entity")
         {
-            //TELEPORTING PLAYEr
-            Debug.Log("PLAYER TELEPORTED TO ANOTHER STAGE");
-
+            GameManager.instance.ChangeLevel();
         }
     }
 }

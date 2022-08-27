@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public LayerMask whatIsWall;
     //private Animator m_characterAnimator;
 
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -27,6 +28,7 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider == null)
         {
+            if(!GameManager.instance.playerDied)
             transform.Translate(0, moveDir.y * Time.deltaTime, 0);
 
         }
@@ -38,7 +40,8 @@ public class PlayerController : MonoBehaviour
 
         if (hit.collider == null)
         {
-            transform.Translate(moveDir.x * Time.deltaTime, 0, 0);
+            if (!GameManager.instance.playerDied)
+                transform.Translate(moveDir.x * Time.deltaTime, 0, 0);
 
         }
         /*else

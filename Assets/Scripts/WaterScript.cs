@@ -6,6 +6,9 @@ public class WaterScript : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Drowned");
+        if(collision.tag == "Player")
+        {
+            GameManager.instance.Death();
+        }
     }
 }

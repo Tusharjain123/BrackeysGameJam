@@ -16,13 +16,29 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (GameManager.instance.playerDied)
+        {
+            target = null;
+        }
+
+        if(target != null)
+        {
+
+            MoveCamera();
+        }
+        
+
+
+    }
+    private void MoveCamera()
+    {
         Vector3 delta = Vector3.zero;
 
         float deltaX = target.position.x - transform.position.x;
         float deltaY = target.position.y - transform.position.y;
-        if(deltaX > boundX ||deltaX< -boundX)
+        if (deltaX > boundX || deltaX < -boundX)
         {
-            if(target.position.x - transform.position.x >0)
+            if (target.position.x - transform.position.x > 0)
             {
                 delta.x = deltaX - boundX;
             }
@@ -36,7 +52,7 @@ public class CameraController : MonoBehaviour
         {
             if (target.position.y - transform.position.y > 0)
             {
-                delta.y =  deltaY - boundY;
+                delta.y = deltaY - boundY;
             }
             else
             {
@@ -44,8 +60,6 @@ public class CameraController : MonoBehaviour
             }
         }
 
-        transform.position += new Vector3(delta.x, delta.y,0);
-
-
+        transform.position += new Vector3(delta.x, delta.y, 0);
     }
 }
