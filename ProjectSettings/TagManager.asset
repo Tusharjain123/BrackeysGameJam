@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shootable
+  - enemy
+  - KeyChest
+  - Interactable
   layers:
   - Default
   - TransparentFX
@@ -17,9 +20,9 @@ TagManager:
   - Lighting
   - Ground
   - Postprocessing
-  - 
-  - 
-  - 
+  - Background
+  - Blocking
+  - Entity
   - 
   - 
   - 
@@ -44,4 +47,16 @@ TagManager:
     locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Floor
+    uniqueID: 1140385417
+    locked: 0
+  - name: Player
+    uniqueID: 9483607
+    locked: 0
+  - name: Interactable
+    uniqueID: 1622258679
+    locked: 0
+  - name: Traps
+    uniqueID: 781820395
     locked: 0
